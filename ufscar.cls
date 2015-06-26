@@ -1,43 +1,45 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ufscar}[2015/06/23 Template UFSCar relatorio]
+\ProvidesClass{ufscar}[2015/06/26 Template UFSCar relatorio]
 
-\def\@@ptsize{12pt}
-\DeclareOption{10pt}{\def\@@ptsize{10pt}}
-\DeclareOption{11pt}{\def\@@ptsize{11pt}}
-\DeclareOption{12pt}{\def\@@ptsize{12pt}}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
-\ProcessOptions\relax
-\LoadClass[a4, \@@ptsize]{article}
+% Personal data
 
-\RequirePackage{etoolbox}
+\input{seus-dados}
+
+% Packages
+
+\LoadClass[a4, 12pt]{article}
 \RequirePackage[brazilian]{babel}
 \RequirePackage[utf8]{inputenc}
-
-\RequirePackage{indentfirst}
-
 \RequirePackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-
+\RequirePackage{indentfirst}
+\RequirePackage{etoolbox}
 \RequirePackage{geometry}
-\geometry{margin=1in, bottom=2.5in}
-
 \RequirePackage{setspace}
-\doublespacing
-
 \RequirePackage{titlesec}
+\RequirePackage{tocloft}
+\RequirePackage{graphicx}
+\RequirePackage{fancyhdr}
+
+% Document structure
+
+\doublespacing
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{fancy}
+\geometry{margin=1in, bottom=2.5in}
+\AtBeginDocument {\capa\conteudo}
+\AtEndDocument {\assinaturas}
+
+% Sections
+
 \titleformat{\section}
   {\normalfont\bfseries}{\thesection.}{1em}{}[{\titlerule[0.8pt]}]
 \titleformat{\subsection}
   {\normalfont\bfseries}{\thesubsection}{1em}{}
 
-\RequirePackage{tocloft}
-\renewcommand{\cftsecfont}{}
-\renewcommand{\cftdotsep}{0.5}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% Header and footer
 
-\RequirePackage{graphicx}
-\RequirePackage{fancyhdr}
-\pagestyle{fancy}
+\setlength\headheight{108pt}
+\renewcommand{\headrulewidth}{0pt}
 
 \lhead{}
 \chead{%
@@ -47,9 +49,6 @@
   Estágio Supervisionado em Ciência da Computação%
 }
 \rhead{}
-
-\setlength\headheight{108pt}
-\renewcommand{\headrulewidth}{0pt}
 
 \lfoot{}
 \rfoot{\thepage}
@@ -62,7 +61,7 @@
   \cfoot{}
 }
 
-\renewcommand{\contentsname}{}
+% Summary
 
 \addto\captionsbrazilian{%
   \renewcommand{\contentsname}%
@@ -70,6 +69,12 @@
 }
 
 \newcommand{\conteudo}{\tableofcontents\thispagestyle{coverstyle}\newpage}
+
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftdotsep}{0.5}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Signatures
 
 \newcommand{\assinaturas}{\newpage\section{Assinaturas}%
 \begin{center}%
@@ -90,6 +95,8 @@
 \emph{Assinatura do supervisor do estágio na UFSCar}\\%
 \emph{\professorNome\enskip(\professorCargo)}%
 \end{center}}
+
+% Cover page
 
 \newcommand{\capa}{\vspace*{10cm}%
 \begin{flushright}%
