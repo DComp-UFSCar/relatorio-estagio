@@ -6,3 +6,7 @@ O arquivo `seus-dados.tex` contém macros que devem ser definidas para preenchim
 
 # Compilando
 Basta executar `pdflatex relatorio.tex` que o pdf será gerado. Um exemplo de relatório gerado pode ser encontrado [neste link](https://github.com/UFSCar/relatorio-estagio/blob/master/relatorio.pdf).
+
+# ShareLaTeX
+
+Há um [modelo](https://www.sharelatex.com/templates/56434a5d08f4ac510fbc6b08) no ShareLaTeX caso prefira editar direto no navegador. Deste modo basta clicar em "Open in ShareLaTeX" e o modelo será aberto em sua conta para edição direta.
