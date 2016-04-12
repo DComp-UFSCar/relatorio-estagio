@@ -1,9 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ufscar}[2015/06/26 Template UFSCar relatorio]
-
-% Personal data
-
-\input{seus-dados}
+\ProvidesClass{ufscar}[2016/04/12 Template UFSCar relatorio]
 
 % Packages
 
@@ -19,6 +15,10 @@
 \RequirePackage{tocloft}
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
+
+% Personal data
+
+\input{seus-dados}
 
 % Document structure
 
