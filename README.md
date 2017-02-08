@@ -9,4 +9,4 @@ Basta executar `pdflatex relatorio.tex` que o pdf será gerado. Um exemplo de re
 
 # ShareLaTeX
 
-Há um [modelo](https://www.sharelatex.com/templates/56434a5d08f4ac510fbc6b08) no ShareLaTeX caso prefira editar direto no navegador. Deste modo basta clicar em "Open in ShareLaTeX" e o modelo será aberto em sua conta para edição direta.
+Há um [modelo](https://www.sharelatex.com/templates/57978b1fdb3e938e3e5e8d34) no ShareLaTeX caso prefira editar direto no navegador. Deste modo basta clicar em "Open in ShareLaTeX" e o modelo será aberto em sua conta para edição direta.
