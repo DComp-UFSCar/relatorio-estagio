@@ -13,5 +13,5 @@ Há um [modelo](https://www.sharelatex.com/templates/57978b1fdb3e938e3e5e8d34) n
 # Contribuidores
 Breno Freitas | [github](https://github.com/brenolf)
 
-Giovana Morais | [github](https://gihutb.com/giovana-morais)
+Giovana Morais | [github](https://github.com/giovana-morais)
 
