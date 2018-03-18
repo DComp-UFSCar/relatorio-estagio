@@ -1,12 +1,10 @@
-# Giovana Vieira de Morais
-#   giovana.vmorais@gmail.com
-#
-#
-
 REPORT = relatorio.pdf
 LATEX = pdflatex -interaction nonstopmode --shell-escape 
-DEPS = relatorio.tex
-
+# caso haja mais de um arquivo no relatório, editar essa variável
+DEPS = relatorio.tex \
+       # dependencia1.tex \
+       # dependencia2.tex	 
+	
 all: $(REPORT)
 
 $(REPORT): $(DEPS)
@@ -22,4 +20,4 @@ clean:
 	rm *.aux
 
 read:
-	evice $(REPORT)
+	evince $(REPORT)
